@@ -1,8 +1,8 @@
 export const environment = {
   production: false,
-  server: 'http://localhost:3000',
+  server: 'http://questionnaire.local/api',
   socket: {
-    url: 'http://localhost:3000',
+    url: 'http://questionnaire.local',
     options: {}
   }
 };
