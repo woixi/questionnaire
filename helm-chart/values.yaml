@@ -1,0 +1,32 @@
+backend:
+  replicaCount: 1
+  image:
+    repository: woixi/questionnaire
+    tag: backend
+  service:
+    port: 3000
+  env:
+    NODE_ENV: production
+    MONGO_URI: mongodb://mongo:27017
+
+frontend:
+  replicaCount: 1
+  image:
+    repository: woixi/questionnaire
+    tag: frontend
+  service:
+    port: 80
+
+mongodb:
+  replicaCount: 1
+  image:
+    repository: mongo
+    tag: latest
+  persistence:
+    size: 8Gi
+
+nginx:
+  replicaCount: 1
+  image:
+    repository: nginx
+    tag: latest
